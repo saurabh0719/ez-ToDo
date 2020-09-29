@@ -1,24 +1,34 @@
 'use strict'
 
-const { BrowserWindow } = require('electron')
+const { ipcRenderer } = require('electron')
 
-const defaultProps = {
-    width: 500,
-    height: 800,
-    show: false,
-    webPreferences: {
-      nodeIntegration: true
-    }
-  }
+// delete todo by its text value ( used below in event listener)
+const deleteTodo = (e) => {
+  ipcRenderer.send('delete-todo', e.target.textContent)
+}
 
-  class Window extends BrowserWindow{
-      constructor({file, ...windowsettings}){
-          super({...defaultProps,...windowsettings})
-          this.loadFile(file)
-          this.webContents.openDevTools()
+// create add todo window button
+document.getElementById('createTodoBtn').addEventListener('click', () => {
+  ipcRenderer.send('add-todo-window')
+})
 
-          this.once('ready-to-show', ()=> { this.show() })
-      }
-  }
+// on receive todos
+ipcRenderer.on('todos', (event, todos) => {
+  // get the todoList ul
+  const todoList = document.getElementById('todoList')
 
-  module.exports = Window
+  // create html string
+  const todoItems = todos.reduce((html, todo) => {
+    html += `<li class="todo-item">${todo}</li>`
+
+    return html
+  }, '')
+
+  // set list html to the todo items
+  todoList.innerHTML = todoItems
+
+  // add click handlers to delete the clicked todo
+  todoList.querySelectorAll('.todo-item').forEach(item => {
+    item.addEventListener('click', deleteTodo)
+  })
+})

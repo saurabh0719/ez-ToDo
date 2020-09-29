@@ -1,24 +1,32 @@
 <!DOCTYPE html>
 <html>
   <head>
+    
     <meta charset="UTF-8">
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
     <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <title>Hello World!</title>
-    <style>
-      body{
-        font : caption;
-      }
-    </style>
+    <title>Electron To-do</title>
+    <link rel="stylesheet" href="../node_modules/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="style.css">
+
   </head>
   <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
+    <div class="container">
+      <div class="columns">
+        <div class="column col-10">
+          <h1 class="text-center">Todos</h1>
+          <button id="createTodoBtn" type="button" class="btn">
+            Create a New Todo
+          </button>
+          <ul id="todoList"></ul>
+        </div>
+      </div>
+    </div>
 
-    <!-- You can also require other files to run in this process -->
-    <script src="./renderer.js"></script>
+    <script src="./index.js"></script>
   </body>
+
 </html>
+
+
