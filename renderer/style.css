@@ -2,18 +2,27 @@ body {
     font: caption;
   }
   
-  .todo-item {
-    background: none;
-    padding: 0.5rem;
-    margin: 0;
-    cursor: pointer;
-    font-size: 1rem;
-  }
+.todo-item {
+  background: none;
+  padding: 0.5rem;
+  margin: 0;
+  cursor: pointer;
+  font-size: 1rem;
+}
   
-  .todo-item:nth-child(even) {
-    background: #f4f4ff;
-  }
+.todo-item:nth-child(even) {
+  background: #f4f4ff;
+}
   
-  .todo-item:hover {
-    background: #d8d8d8
-  }
+.todo-item:hover {
+  background: #d8d8d8
+}
+
+.delete_todo{
+  margin-left:20%;
+}
+
+.delete_todo:hover {
+  background-color: #f44336;
+  color: white;
+}
