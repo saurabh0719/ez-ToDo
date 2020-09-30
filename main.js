@@ -16,7 +16,7 @@ function main () {
   })
 
   // add todo window
-  let addTodoWin
+  //let addTodoWin
 
   // TODO: put these events into their own file
 
@@ -24,7 +24,7 @@ function main () {
   mainWindow.once('show', () => {
     mainWindow.webContents.send('todos', todosData.todos)
   })
-
+/*
   // create add todo window
   ipcMain.on('add-todo-window', () => {
     // if addTodoWin does not already exist
@@ -43,7 +43,7 @@ function main () {
         addTodoWin = null
       })
     }
-  })
+  })*/
 
   // add-todo from add todo window
   ipcMain.on('add-todo', (event, todo) => {

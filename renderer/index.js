@@ -7,11 +7,25 @@ const deleteTodo = (e) => {
   ipcRenderer.send('delete-todo', e.target.textContent)
 }
 
+document.getElementById('todoForm').addEventListener('submit', (evt) => {
+  // prevent default refresh functionality of forms
+  evt.preventDefault()
+
+  // input on the form
+  const input = evt.target[0]
+
+  // send todo to main process
+  ipcRenderer.send('add-todo', input.value)
+
+  // reset input
+  input.value = ''
+})
+/*
 // create add todo window button
 document.getElementById('createTodoBtn').addEventListener('click', () => {
   ipcRenderer.send('add-todo-window')
 })
-
+*/
 // on receive todos
 ipcRenderer.on('todos', (event, todos) => {
   // get the todoList ul

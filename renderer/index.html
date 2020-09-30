@@ -22,15 +22,27 @@
         <div class="col">
           <br>
           <h5 class="text-center">ez to do list</h5>
-          <button id="createTodoBtn" type="button" class=" text-center btn btn-default">
-            +
-          </button>
+          <form id="todoForm">
+            
+
+            <div class="form-group">
+              <label class="form-label" for="add-input">Todo</label>
+              <br>
+              
+                <input class="form-input" type="text" name="add-input" placeholder="I have to...">
+            </div>
+                <button id="createTodoBtn" class=" text-center btn btn-default">
+                 +
+                </button>
+            
+          </form>
+
         </div>
       </div>
       <br>
       <div class="row">
         <div class="col">
-          <ul id="todoList" class="list-group list-group-flush"></ul>
+          <ul id="todoList" style="justify-content: center;" class="list-group list-group-flush"></ul>
         </div>
       </div>
     </div>
