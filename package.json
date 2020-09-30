@@ -17,11 +17,13 @@
   "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^10.1.3"
+    "electron": "^10.1.3",
+    "electron-tooltip": "^1.1.5"
   },
   "dependencies": {
     "bootstrap": "^4.5.2",
     "electron-store": "^6.0.0",
+    "font-awesome": "^4.7.0",
     "jquery": "^3.5.1",
     "popper.js": "^1.16.1"
   }

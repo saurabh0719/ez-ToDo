@@ -8,7 +8,7 @@
     <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
     <title>Electron To-do</title>
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-
+    <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="../node_modules/popper.js/dist/popper.min.js"></script>
@@ -21,28 +21,26 @@
       <div class="row">
         <div class="col">
           <br>
-          <h5 class="text-center">ez to do list</h5>
-          <form id="todoForm">
-            
+          <h5 class="text-center">EZ To-do</h5>
+          <hr>
+          <form id="todoForm" class="form-inline" style="width:100%;">
 
-            <div class="form-group">
-              <label class="form-label" for="add-input">Todo</label>
-              <br>
-              
-                <input class="form-input" type="text" name="add-input" placeholder="I have to...">
+            <div class="form-group">  
+                <input class="form-input" type="text" name="add-input" required placeholder="Add a task">
             </div>
-                <button id="createTodoBtn" class=" text-center btn btn-default">
-                 +
-                </button>
+            <button type="submit" class="btn">
+              <i class="fa fa-plus-circle fa-lg" aria-hidden="true"></i>
+             </button>
+            
+                
             
           </form>
 
         </div>
       </div>
-      <br>
       <div class="row">
         <div class="col">
-          <ul id="todoList" style="justify-content: center;" class="list-group list-group-flush"></ul>
+          <ul id="todoList" style="justify-content: center;" class="list-group"></ul>
         </div>
       </div>
     </div>

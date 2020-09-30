@@ -3,7 +3,7 @@
 const { ipcRenderer } = require('electron')
 
 // delete todo by its text value ( used below in event listener)
-const deleteTodo = (e) => {
+function deleteTodo(e) {
   ipcRenderer.send('delete-todo', e.target.textContent)
 }
 
@@ -33,7 +33,7 @@ ipcRenderer.on('todos', (event, todos) => {
 
   // create html string
   const todoItems = todos.reduce((html, todo) => {
-    html += `<li class="todo-item list-group-item">${todo}</li>`
+    html += `<li class="todo-item list-group-item" data-toggle="tooltip" data-placement="bottom" title="Click to delete task">${todo}</li>`
 
     return html
   }, '')
