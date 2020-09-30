@@ -32,7 +32,7 @@ function main () {
       // create a new add todo window
       addTodoWin = new Window({
         file: path.join('renderer', 'add.html'),
-        width: 400,
+        width: 300,
         height: 400,
         // close with the main window
         parent: mainWindow

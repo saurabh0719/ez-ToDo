@@ -5,7 +5,11 @@
   <head>
     <meta charset="UTF-8">
     <title>Add Todo</title>
-    <link rel="stylesheet" href="../node_modules/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../node_modules/popper.js/dist/popper.min.js"></script>
     <link rel="stylesheet" href="style.css">
   </head>
 
@@ -18,10 +22,11 @@
           <form id="todoForm">
             <div class="form-group">
               <label class="form-label" for="add-input">Todo</label>
+              <br>
               <input class="form-input" type="text" name="add-input" placeholder="I have to...">
             </div>
 
-            <button class="btn">Add Todo</button>
+            <button class="btn btn-outline-success">Add Todo</button>
           </form>
 
         </div>
