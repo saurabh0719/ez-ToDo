@@ -1,9 +1,13 @@
 body {
     font: caption;
   }
-  
+
+.list-group{
+  margin-left:5%;
+}
+  /*
 .todo-item {
-  background: none;
+  background: #C3C1CB;
   padding: 0.5rem;
   margin: 0;
   cursor: pointer;
@@ -25,4 +29,9 @@ body {
 .delete_todo:hover {
   background-color: #f44336;
   color: white;
+}
+*/
+
+.btn{
+  margin-left: 4%;
 }
