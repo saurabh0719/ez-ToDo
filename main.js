@@ -18,11 +18,21 @@ function main () {
   // add todo window
   //let addTodoWin
 
+  var todays_date = new Date(Date.now()).toLocaleDateString(
+    'en-gb',
+    {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    }
+  )
+
   // TODO: put these events into their own file
 
   // initialize with todos
   mainWindow.once('show', () => {
     mainWindow.webContents.send('todos', todosData.todos)
+    mainWindow.webContents.send('todays-date', todays_date)
   })
 /*
   // create add todo window

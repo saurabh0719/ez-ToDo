@@ -47,6 +47,14 @@ ipcRenderer.on('todos', (event, todos) => {
   })
 })
 
+ipcRenderer.on('todays-date', (event, todays_date) => {
+  
+  const today_date = document.getElementById('date_heading')
+
+  today_date.innerHTML = todays_date
+
+})
+
 /*
 
 var myNodelist = document.getElementsByTagName("LI");

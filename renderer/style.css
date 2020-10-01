@@ -41,7 +41,7 @@ input{
   
 .todo-item:hover {
   background: #C7C7EF;
-  transform: scale(1.05);
+  transform: scale(1.09);
 }
 
 .delete_todo{
