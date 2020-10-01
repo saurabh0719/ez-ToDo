@@ -2,7 +2,9 @@
 
 A clean to-do list app made on Electron
 
-<img src="demo.gif" width="250" height="250"/>
+<p align="center">
+<img src="demo.gif" width="350" height="500"/>
+  </p>
 
 ### Installation steps
 Clone the repository :
