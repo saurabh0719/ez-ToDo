@@ -7,6 +7,8 @@ A clean cross-platform to-do list app made on Electron
   </p>
 
 ### Installation steps
+Using npm (Recommended)
+
 Clone the repository :
 ```sh
 $ git clone https://github.com/saurabh0719/ez-ToDo.git
@@ -21,4 +23,4 @@ $ npm start
 ```
 
 ### Releases
-[Click here](https://github.com/saurabh0719/ez-ToDo/releases/tag/v1.0) to download the zip containing the executable (.exe) for win32-X64.
+[Click here](https://github.com/saurabh0719/ez-ToDo/releases/tag/v1.0) to download the zip containing the executable (.exe) for win32-X64. 
