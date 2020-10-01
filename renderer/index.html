@@ -6,7 +6,7 @@
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
     <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <title>Electron To-do</title>
+    <title>Ez To-do</title>
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
@@ -17,11 +17,14 @@
 
   </head>
   <body>
-    <div class="container">
+    <div class="container mainbody">
+
+      <div class="row header">
+        <h5 class="text-center header-text" id="date_heading" ></h5>
+      </div>
       <div class="row">
         <div class="col">
-          <br>
-          <h5 class="text-center" id="date_heading" >EZ To-do</h5>
+          <p class="text-center" id="introduction"></p>
           <hr>
           <form id="todoForm" class="form-inline" style="width:100%;">
 
@@ -30,9 +33,7 @@
             </div>
             <button type="submit" class="btn">
               <i class="fa fa-plus-circle fa-lg" aria-hidden="true"></i>
-             </button>
-            
-                
+             </button>    
             
           </form>
 
@@ -43,6 +44,13 @@
           <ul id="todoList" style="justify-content: center;" class="list-group"></ul>
         </div>
       </div>
+    </div>
+      
+    <div class="container footer">
+      <div class="row">
+        <p class="footer-text" id="showGithub">Github : <i class="fa fa-github fa-lg" aria-hidden="true"></i></p>
+      </div>
+
     </div>
 
     <script src="./index.js"></script>

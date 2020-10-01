@@ -6,6 +6,7 @@ body {
 .list-group{
   margin-left:5%;
   margin-right:5%;
+  margin-bottom:5%;
 }
 
 input{
@@ -19,11 +20,47 @@ input{
   box-shadow:0 0 10px 2px rgba(0,0,0,0.06);
 }
 
-.btn{
-  margin-left:5%;
+.mainbody{
+  margin-bottom : 20%;
 }
 
+.btn{
+  margin-left:5%;
+  margin-top:0%;
+}
 
+.btn:focus,.btn:active {
+  outline: none !important;
+  box-shadow: none;
+}
+
+.footer{
+  position: fixed;
+  bottom:0;
+  background: #f4f4ff;
+  width: 100%;
+  padding-top:5%;
+  margin-top: 5%;
+}
+
+#introduction{
+  padding-bottom: 0%;
+  padding-top: 5%;
+}
+
+.header{
+  background: #f4f4ff;
+  padding-top:5%;
+}
+
+.footer-text{
+  margin-left: 8%;
+}
+
+.header-text{
+  margin-left: 25%;
+  padding-bottom: 2%;
+}
 
 .todo-item {
   background: white;

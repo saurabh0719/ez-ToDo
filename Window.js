@@ -4,7 +4,7 @@ const { BrowserWindow } = require('electron')
 
 const defaultProps = {
     width: 350,
-    height: 450,
+    height: 500,
     show: false,
     resizable: false,
     fullscreen: false,

@@ -2,33 +2,26 @@
 
 const { ipcRenderer } = require('electron')
 
-// delete todo by its text value ( used below in event listener)
 function deleteTodo(e) {
   ipcRenderer.send('delete-todo', e.target.textContent)
 }
 
 document.getElementById('todoForm').addEventListener('submit', (evt) => {
-  // prevent default refresh functionality of forms
+  
   evt.preventDefault()
-
-  // input on the form
   const input = evt.target[0]
-
-  // send todo to main process
   ipcRenderer.send('add-todo', input.value)
-
-  // reset input
   input.value = ''
+
 })
-/*
-// create add todo window button
-document.getElementById('createTodoBtn').addEventListener('click', () => {
-  ipcRenderer.send('add-todo-window')
+
+// create add github window button
+document.getElementById('showGithub').addEventListener('click', () => {
+  ipcRenderer.send('github-window')
 })
-*/
-// on receive todos
+
 ipcRenderer.on('todos', (event, todos) => {
-  // get the todoList ul
+  
   const todoList = document.getElementById('todoList')
 
   // create html string
@@ -38,50 +31,23 @@ ipcRenderer.on('todos', (event, todos) => {
     return html
   }, '')
 
-  // set list html to the todo items
   todoList.innerHTML = todoItems
-
-  // add click handlers to delete the clicked todo
   todoList.querySelectorAll('.todo-item').forEach(item => {
     item.addEventListener('click', deleteTodo)
   })
+
 })
 
 ipcRenderer.on('todays-date', (event, todays_date) => {
   
   const today_date = document.getElementById('date_heading')
-
-  today_date.innerHTML = todays_date
+  today_date.innerHTML = `<i class="fa fa-calendar" aria-hidden="true"></i>  ` + todays_date
 
 })
 
-/*
+ipcRenderer.on('User-intro', (event, introduction) => {
+  
+  console.log(introduction)
+  document.getElementById('introduction').innerHTML = introduction
 
-var myNodelist = document.getElementsByTagName("LI");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  myNodelist[i].appendChild(span);
-}
-
-// Click on a close button to hide the current list item
-var close = document.getElementsByClassName("close");
-var i;
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
-  }
-}
-
-// Add a "checked" symbol when clicking on a list item
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
-  }
-}, false);
-*/
+})

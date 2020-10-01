@@ -21,6 +21,10 @@ class DataStore extends store{
         this.todos = this.todos.filter(t => t !== todo)
         return this.saveTodos()
     }
+    get sumTodos(){
+        this.todos = this.get('todos') || []
+        return this.todos.length
+    }
 }
 
 module.exports = DataStore

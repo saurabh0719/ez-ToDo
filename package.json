@@ -1,20 +1,19 @@
 {
   "name": "electron-quick-start",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "A minimal Electron To-Do list application",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/saurabh0719/ez-ToDo",
   "keywords": [
     "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
+    "to-do app",
+    "task scheduler",
+    "to-do"
   ],
-  "author": "GitHub",
+  "author": "saurabh0719",
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^10.1.3",
