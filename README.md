@@ -2,7 +2,7 @@
 
 A clean to-do list app made on Electron
 
-![](demo.gif)
+<img src="demo.gif" width="250" height="250"/>
 
 ### Installation steps
 Clone the repository :
