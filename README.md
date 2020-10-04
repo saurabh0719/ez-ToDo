@@ -6,8 +6,8 @@ A clean cross-platform to-do list desktop application written in javascript usin
 <img src="demo.gif" width="350" height="500"/>
   </p>
 
-### Installation steps
-Using npm (Recommended)
+### Install via github :
+Using npm 
 
 Clone the repository :
 ```sh
@@ -22,5 +22,5 @@ Run it :
 $ npm start
 ```
 
-### Releases
+### Releases :
 [Click here](https://github.com/saurabh0719/ez-ToDo/releases/tag/v1.0) to download the zip containing the executable (.exe) for win32-X64. 
