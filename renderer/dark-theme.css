@@ -1,14 +1,26 @@
 body {
     font: caption;
-    background-color: #DCF8FE;
+    background-color: #252525;
   }
+  
 
+.button1{
+    background-color: #343333; 
+    outline : none;
+    text-align: center;
+    color: #f6c90e
+}
+.button1:focus{
+    outline: none;
+}
 .list-group{
   margin-left:5%;
   margin-right:5%;
   margin-bottom:5%;
 }
-
+.fa-plus-circle{
+    color : #f6c90e; 
+}
 input{
   width: 100%;
   margin-top: 8%;
@@ -17,7 +29,10 @@ input{
   padding-left: 3%;
   padding-bottom: 3%;
   border:0;
+  outline: none;
   box-shadow:0 0 10px 2px rgba(0,0,0,0.06);
+  color: #f6c90e;
+  background-color: #303030;
 }
 
 .mainbody{
@@ -37,20 +52,27 @@ input{
 .footer{
   position: fixed;
   bottom:0;
-  background: #f4f4ff;
+  background: black;
   width: 100%;
   padding-top:5%;
   margin-top: 5%;
+  color: whitesmoke;
 }
 
 #introduction{
   padding-bottom: 0%;
   padding-top: 5%;
+  color : #f6c90e;
 }
 
+hr{
+    background-color: #504f4f;
+}
 .header{
-  background: #f4f4ff;
+  background:black;
   padding-top:5%;
+  color: #f6c90e;
+  text-align:center;
 }
 
 .footer-text{
@@ -63,21 +85,22 @@ input{
 }
 
 .todo-item {
-  background: white;
-  border-color: white;
+  background: #343333;
+  border-color:black;
   box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
   padding: 0.5rem;
   margin: 0;
   cursor: pointer;
   font-size: 1rem;
+  color:  #f6c90e;
 }
   
 .todo-item:nth-child(even) {
-  background: #f4f4ff;
+  background:  #292828;
 }
   
 .todo-item:hover {
-  background: #C7C7EF;
+  background: #4d4b4b;
   transform: scale(1.09);
 }
 
@@ -87,6 +110,6 @@ input{
 
 .delete_todo:hover {
   background-color: #f44336;
-  color: white;
+  color: green;
 }
 

@@ -12,16 +12,19 @@
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="../node_modules/popper.js/dist/popper.min.js"></script>
-
-    <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--<link rel="stylesheet" href="style.css">!-->
+    <link id="theme" rel="stylesheet" type="text/css" href="light-theme.css" />
   </head>
   <body>
     <div class="container mainbody">
+      
 
       <div class="row header">
-        <h5 class="text-center header-text" id="date_heading" ></h5>
+        <h5 class=" header-text" id="date_heading" ></h5>
+        <button class = "button1" id="theme-toggle">Join the Dark side</button>
       </div>
+      
       <div class="row">
         <div class="col">
           <p class="text-center" id="introduction"></p>
@@ -31,7 +34,7 @@
             <div class="form-group">  
                 <input class="form-input" type="text" name="add-input" required placeholder="Add a task">
             </div>
-            <button type="submit" class="btn">
+            <button style = "color:#BB86FC" type="submit" class="btn">
               <i class="fa fa-plus-circle fa-lg" aria-hidden="true"></i>
              </button>    
             
@@ -57,5 +60,8 @@
   </body>
 
 </html>
+
+
+
 
 

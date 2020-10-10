@@ -1,0 +1,104 @@
+body {
+  font: caption;
+  background-color: #DCF8FE;
+  outline: none;
+}
+
+.button1{
+  background-color:#DCF8FE;
+  color: black;
+  text-align: center;
+  outline: none;
+}
+.button1:focus{
+  outline: none;
+}
+.list-group{
+margin-left:5%;
+margin-right:5%;
+margin-bottom:5%;
+}
+
+input{
+width: 100%;
+margin-top: 8%;
+margin-left: 8%;
+padding-top: 3%;
+padding-left: 3%;
+padding-bottom: 3%;
+border:0;
+outline: none;
+box-shadow:0 0 10px 2px rgba(0,0,0,0.06);;
+}
+
+.mainbody{
+margin-bottom : 20%;
+}
+
+.btn{
+margin-left:5%;
+margin-top:0%;
+}
+
+.btn:focus,.btn:active {
+outline: none !important;
+box-shadow: none;
+}
+
+.footer{
+position: fixed;
+bottom:0;
+background: #f4f4ff;
+width: 100%;
+padding-top:5%;
+margin-top: 5%;
+}
+
+#introduction{
+padding-bottom: 0%;
+padding-top: 5%;
+}
+
+.header{
+background: #f4f4ff;
+padding-top:5%;
+}
+
+.footer-text{
+margin-left: 8%;
+}
+
+.header-text{
+margin-left: 25%;
+padding-bottom: 2%;
+}
+
+.todo-item {
+background: white;
+border-color: white;
+box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+padding: 0.5rem;
+margin: 0;
+cursor: pointer;
+font-size: 1rem;
+}
+
+.todo-item:nth-child(even) {
+background: #f4f4ff;
+}
+
+.todo-item:hover {
+background: #C7C7EF;
+transform: scale(1.09);
+}
+
+.delete_todo{
+margin-left:20%;
+}
+
+.delete_todo:hover {
+background-color: #f44336;
+color: white;
+}
+
+
