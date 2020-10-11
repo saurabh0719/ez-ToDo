@@ -5,7 +5,22 @@ const { ipcRenderer } = require('electron')
 function deleteTodo(e) {
   ipcRenderer.send('delete-todo', e.target.textContent)
 }
-document.addEventListener('DOMContentLoaded', () => {
+
+document.addEventListener('DOMContentLoaded', function () {
+  const checkbox = document.querySelector('input[type="checkbox"]');
+  const themeStylesheet = document.getElementById('theme');
+  checkbox.addEventListener('change', function () {
+    if (checkbox.checked) {
+      themeStylesheet.href = 'dark-theme.css';
+      console.log('Checked');
+    } else {
+      themeStylesheet.href = 'light-theme.css';
+      console.log('Not checked');
+    }
+  });
+});
+
+/*document.addEventListener('DOMContentLoaded', () => {
 
   const themeStylesheet = document.getElementById('theme');
   const themeToggle = document.getElementById('theme-toggle');
@@ -21,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       }
   })
-})
+})*/
 
 document.getElementById('todoForm').addEventListener('submit', (evt) => {
   
