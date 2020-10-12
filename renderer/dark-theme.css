@@ -52,7 +52,7 @@ input{
 .footer{
   position: fixed;
   bottom:0;
-  background: black;
+  background: rgb(53, 52, 52);
   width: 100%;
   padding-top:5%;
   margin-top: 5%;
@@ -69,7 +69,7 @@ hr{
     background-color: #504f4f;
 }
 .header{
-  background:black;
+  background: rgb(53, 52, 52);
   padding-top:5%;
   color: #f6c90e;
   text-align:center;
