@@ -2,6 +2,7 @@
 
 A clean cross-platform to-do list desktop application written in javascript using the Electron framework.
 
+
 <p align="center" style="box-shadow:0 0 10px 2px rgba(0,0,0,0.06);">
 <img src="demo.gif" width="350" height="500"/>
   </p>
