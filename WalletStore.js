@@ -26,6 +26,30 @@ class WalletStore extends store{
         this.transactions = this.get('transactions') || []
         return this.transactions.length
     }
+
+    
+    get sortOrder(transactions,sortBy,sortingOrder,){
+        if(sortingOrder){
+        transactions.sort(function(a,b)
+        {
+            let x = a[sortBy];
+            let y = b[sortBy];
+            return ((x < y) ? -1 : ((x > y) ? 1 : 0)
+        });
+    }
+    else
+    {
+        transactions.sort(function(a,b)
+        {
+            let x = a[sortBy];
+            let y = b[sortBy];
+            return ((x > y) ? -1 : ((x < y) ? 1 : 0)
+        });
+    }
+
+        
+    }
+
 }
 
 

@@ -10,7 +10,7 @@ const defaultProps = {
     fullscreen: false,
     webPreferences: {
       nodeIntegration: true,
-      devTools: false
+      devTools: true
     }
   }
 
